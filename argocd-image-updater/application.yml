@@ -5,18 +5,15 @@ metadata:
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: nginx=kishoredurai/kishore-nginx
-    argocd-image-updater.argoproj.io/nginx.pull-secret: pullsecret:argocd/regcred  # You can remove this annotation if you have already configured the gcr secret and are using the same secret to retrieve all GCR images in your deployments.
+    argocd-image-updater.argoproj.io/nginx.pull-secret: secret:default/regcred  # You can remove this annotation if you have already configured the gcr secret and are using the same secret to retrieve all GCR images in your deployments.
     argocd-image-updater.argoproj.io/nginx.update-strategy: digest
     argocd-image-updater.argoproj.io/write-back-method: git  # We don't need the secret as mentioned in argocd doc because we already set it up via argocd console if you're using the same git repo.
     argocd-image-updater.argoproj.io/git-branch: image-updater
     argocd-image-updater.argoproj.io/write-back-target: deployment
     argocd-image-updater.argoproj.io/myalias.force-update: "true"
 
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-  
   labels:
-    name: ms-echoserver-application
+    name: image-updater-application
 
 spec:
   project: default
