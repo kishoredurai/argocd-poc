@@ -10,7 +10,7 @@ spec:
   replicas: 2
   containers:
   - name: webcon
-    image: sudarshanlnx/2022sundayweb3:latest
+    image: kishoredurai/kishore-nginx
     imagePullPolicy: Always
     ports:
     - containerPort: 80
