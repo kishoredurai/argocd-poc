@@ -10,7 +10,7 @@ spec:
   replicas: 1
   containers:
   - name: webcon
-    image: kishoredurai/kishore-nginx:testing
+    image: kishoredurai/kishore-nginx:latest
     imagePullPolicy: Always
     ports:
     - containerPort: 80
