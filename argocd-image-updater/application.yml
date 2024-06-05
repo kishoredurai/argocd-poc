@@ -4,7 +4,8 @@ metadata:
   name: image-updater-application  
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: myalias=docker.io/kishoredurai/kishore-nginx          #Write repository name
+    argocd-image-updater.argoproj.io/image-list: myalias=docker.io/kishoredurai/kishore-nginx
+    argocd-image-updater.argoproj.io/myalias.update-strategy: latest  #Write repository name
     argocd-image-updater.argoproj.io/write-back-method: git          #Setting git credential
     argocd-image-updater.argoproj.io/git-branch: image-updater                                          #git branch where your workflow exists
     argocd-image-updater.argoproj.io/myalias.force-update: "true"
