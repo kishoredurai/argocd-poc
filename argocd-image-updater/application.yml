@@ -17,7 +17,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/kishoredurai/argocd-poc.git
+    repoURL: git@github.com:kishoredurai/argocd-poc.git
     targetRevision: image-updater  
     path: argocd-image-updater/dev # path of the kubernetes application code means where you stored deployment.yaml, service.yaml etc
 
