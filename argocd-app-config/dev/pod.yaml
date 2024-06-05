@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
   - name: webcon
-    image: sudarshanlnx/2022sundayweb3:latest
+    image: kishoredurai/kishore-nginx
     imagePullPolicy: Always
     ports:
     - containerPort: 80
@@ -22,6 +22,8 @@ spec:
           limits:
             memory: "300Mi"
             cpu: "400m"
+    imagePullSecrets:
+        - name: dockerhub-secret
 ---
 apiVersion: v1
 kind: Service
