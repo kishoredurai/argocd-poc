@@ -23,6 +23,8 @@ spec:
           limits:
             memory: "300Mi"
             cpu: "400m"
+    imagePullSecrets:
+        - name: dockerhub-secret
 ---
 apiVersion: v1
 kind: Service
