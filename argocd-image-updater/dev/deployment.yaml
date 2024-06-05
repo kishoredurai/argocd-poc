@@ -10,7 +10,7 @@ spec:
   replicas: 2
   containers:
   - name: webcon
-    image: 
+    image: sudarshanlnx/2022sundayweb3:latest
     imagePullPolicy: Always
     ports:
     - containerPort: 80
