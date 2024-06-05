@@ -10,7 +10,7 @@ spec:
   replicas: 1
   containers:
   - name: webcon
-    image: kishoredurai/kishore-nginx
+    image: kishoredurai/kishore-nginx:latest
     imagePullPolicy: Always
     ports:
     - containerPort: 80
@@ -23,8 +23,7 @@ spec:
           limits:
             memory: "300Mi"
             cpu: "400m"
-  imagePullSecrets:
-      - name: regcred
+
 ---
 apiVersion: v1
 kind: Service
