@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: apache
-        image: docker.io/kishoredurai/kishore-nginx:latest
+        image: docker.io/kishoredurai/kishore-nginx:5.0
         ports:
         - containerPort: 80
