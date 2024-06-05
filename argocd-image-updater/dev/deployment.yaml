@@ -24,7 +24,7 @@ spec:
             memory: "300Mi"
             cpu: "400m"
   imagePullSecrets:
-  - name: regcred
+      - name: regcred
 ---
 apiVersion: v1
 kind: Service
