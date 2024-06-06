@@ -10,7 +10,6 @@ metadata:
     argocd-image-updater.argoproj.io/nginx.ignore-tags: latest
     argocd-image-updater.argoproj.io/write-back-method: git          #Setting git credential
     argocd-image-updater.argoproj.io/git-branch: image-updater
-    argocd-image-updater.argoproj.io/write-back-target: kustomization                                     #git branch where your workflow exists
     argocd-image-updater.argoproj.io/myalias.force-update: "true"
 
 spec:
