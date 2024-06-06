@@ -1,4 +1,3 @@
 kustomize:
   images:
-  - docker.io/kishoredurai/kishore-nginx:v5.9
-  - docker.io/kishoredurai/kishore-sidecar:latest
+  - docker.io/kishoredurai/kishore-nginx:v5.8
