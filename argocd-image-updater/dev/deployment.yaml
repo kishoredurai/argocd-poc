@@ -17,3 +17,5 @@ spec:
         image: docker.io/kishoredurai/kishore-nginx:main
         ports:
         - containerPort: 80
+      imagePullSecrets:
+        - name: dockerhub-secret
