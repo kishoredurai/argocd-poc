@@ -18,5 +18,10 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+      - name: sidecar
+        image: docker.io/kishoredurai/kishore-sidecar:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
       imagePullSecrets:
         - name: regcred

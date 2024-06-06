@@ -4,13 +4,16 @@ metadata:
   name: image-updater-application  
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: myalias=docker.io/kishoredurai/kishore-nginx
-    argocd-image-updater.argoproj.io/myalias.pull-secret: pullsecret:argocd/dockerhub-secret  # You can remove this annotation if you have already configured the gcr secret and are using the same secret to retrieve all GCR images in your deployments.
+    argocd-image-updater.argoproj.io/image-list: myalias=docker.io/kishoredurai/kishore-nginx,sidecar=docker.io/kishoredurai/kishore-sidecar 
+    argocd-image-updater.argoproj.io/myalias.pull-secret: pullsecret:argocd/dockerhub-secret 
+    argocd-image-updater.argoproj.io/sidecar.pull-secret: pullsecret:argocd/dockerhub-secret  # You can remove this annotation if you have already configured the gcr secret and are using the same secret to retrieve all GCR images in your deployments.
     argocd-image-updater.argoproj.io/myalias.update-strategy: latest
+    argocd-image-updater.argoproj.io/sidecar.update-strategy: name
     argocd-image-updater.argoproj.io/nginx.ignore-tags: latest
     argocd-image-updater.argoproj.io/write-back-method: git          
     argocd-image-updater.argoproj.io/git-branch: image-updater
     argocd-image-updater.argoproj.io/myalias.force-update: "true"
+    argocd-image-updater.argoproj.io/sidecar.force-update: "true"
 
 spec:
   project: default
