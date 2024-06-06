@@ -19,7 +19,7 @@ spec:
         ports:
         - containerPort: 80
       - name: sidecar
-        image: docker.io/kishoredurai/kishore-sidecar:latest
+        image: docker.io/busybox:uclibc
         imagePullPolicy: Always
       imagePullSecrets:
         - name: regcred
