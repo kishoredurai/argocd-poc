@@ -8,9 +8,9 @@ metadata:
     argocd-image-updater.argoproj.io/myalias.pull-secret: pullsecret:argocd/dockerhub-secret  # You can remove this annotation if you have already configured the gcr secret and are using the same secret to retrieve all GCR images in your deployments.
     argocd-image-updater.argoproj.io/myalias.update-strategy: latest
     argocd-image-updater.argoproj.io/nginx.ignore-tags: latest
-    argocd-image-updater.argoproj.io/write-back-method: git          #Setting git credential
-    argocd-image-updater.argoproj.io/git-branch: image-updater
-    argocd-image-updater.argoproj.io/myalias.force-update: "true"
+    # argocd-image-updater.argoproj.io/write-back-method: git          #Setting git credential
+    # argocd-image-updater.argoproj.io/git-branch: image-updater
+    # argocd-image-updater.argoproj.io/myalias.force-update: "true"
 
 spec:
   project: default
