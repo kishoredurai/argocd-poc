@@ -4,7 +4,7 @@ metadata:
   name: image-updater-application  
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: myalias=docker.io/kishoredurai/kishore-nginx,sidecar=docker.io/busybox:uclibc
+    argocd-image-updater.argoproj.io/image-list: myalias=docker.io/kishoredurai/kishore-nginx,sidecar=docker.io/busybox
     argocd-image-updater.argoproj.io/myalias.pull-secret: pullsecret:argocd/dockerhub-secret 
     argocd-image-updater.argoproj.io/sidecar.pull-secret: pullsecret:argocd/dockerhub-secret  # You can remove this annotation if you have already configured the gcr secret and are using the same secret to retrieve all GCR images in your deployments.
     argocd-image-updater.argoproj.io/myalias.update-strategy: latest
