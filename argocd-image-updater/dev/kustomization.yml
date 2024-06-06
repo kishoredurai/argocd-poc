@@ -4,6 +4,3 @@ kind: Kustomization
 resources:
 - deployment.yaml
 - service.yaml
-images:
-- name: docker.io/kishoredurai/kishore-nginx
-  newTag: v5.7
