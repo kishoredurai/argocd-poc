@@ -18,9 +18,15 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
-      initContainers:
       - name: sidecar
         image: docker.io/busybox:1.28
         imagePullPolicy: Always
+        command: ["/bin/sh"]
+        args:
+          [
+            "-c",
+            "while true; do echo echo $(date -u) 'Sidecar container' >> /var/log/index.html; sleep 5;done",
+          ]
       imagePullSecrets:
         - name: regcred
+
