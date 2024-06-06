@@ -6,4 +6,4 @@ resources:
 - service.yaml
 images:
 - name: docker.io/kishoredurai/kishore-nginx
-  newTag: v5.6
+  newTag: v5.7
