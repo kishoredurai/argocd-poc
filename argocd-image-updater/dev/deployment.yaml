@@ -18,6 +18,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+      initContainers:
       - name: sidecar
         image: docker.io/kishoredurai/kishore-sidecar:v5.1
         imagePullPolicy: Always
