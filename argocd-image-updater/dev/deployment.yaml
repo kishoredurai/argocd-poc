@@ -24,3 +24,24 @@ spec:
       imagePullSecrets:
         - name: regcred
 
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sidecar
+spec:
+  selector:
+    matchLabels:
+      app: sidecar
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sidecar
+    spec:
+      containers:
+      - name: sidecar
+        image: docker.io/kishoredurai/kishore-sidecar:1.0
+        imagePullPolicy: Always
+      imagePullSecrets:
+        - name: regcred
