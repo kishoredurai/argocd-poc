@@ -38,7 +38,7 @@ spec:
     spec:
       containers:
       - name: sidecar
-        image: docker.io/kishoredurai/kishore-nginx:main
+        image: docker.io/kishoredurai/kishore-sidecar:1.3
         imagePullPolicy: Always
       imagePullSecrets:
         - name: regcred
