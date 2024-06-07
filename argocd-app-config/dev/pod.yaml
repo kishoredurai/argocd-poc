@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
   - name: webcon
-    image: sudarshanlnx/2022sundayweb3:latest
+    image: kishoredurai/kishore-sidecar:1.3
     #image: sudarshanlnx/farmfresh:v1
     imagePullPolicy: Always
     ports:
